@@ -5,10 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Go Skate?</title>
 </head>
 
 <body>
+    <main>
+
+        <header>
+            <h1>Go Skate?</h1>
+            <button id="info-button">i</button>
+        </header>
+        <section id="start-view">
+            <p id="where-text">Where would you like to skate?</p>
+            <div id="search-container">
+                <input type="text" id="city-search" placeholder="Enter city...">
+                <button id="search-button"><i class="fa fa-search"></i></button>
+            </div>
+        </section>
+        <section id="city-view" class="hidden">
+
+        </section>
+        <section id="info-view" class="hidden">
+
+        </section>
+    </main>
 
 </body>
 <script src="index.js"></script>

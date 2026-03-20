@@ -1,0 +1,77 @@
+:root {
+    --bg-gradient-blue: linear-gradient(180deg, rgba(96, 239, 255, 0.90) 0%, #0061FF 100%);
+    --bg-gradient-sunny: linear-gradient(180deg, rgba(242, 255, 122, 0.90) 0%, rgba(111, 136, 53, 0.93) 100%);
+    --bg-gradient-rainy: linear-gradient(180deg, rgba(87, 108, 138, 0.90) 0%, rgba(68, 68, 68, 0.93) 100%);
+    --bg-gradient-cold: linear-gradient(180deg, rgba(38, 99, 191, 0.90) 0%, rgba(30, 28, 45, 0.93) 100%);
+    --global-font: Inter;
+    --text-color-white: #ffffff;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    background: var(--bg-gradient-blue);
+    font-family: var(--global-font);
+    color: var(--text-color-white);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+#info-button {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid var(--text-color-white);
+    color: var(--text-color-white);
+    background-color: transparent;
+    font-weight: 900;
+}
+
+main {
+    padding: 20px;
+}
+
+#search-container {
+    display: flex;
+    width: 100%;
+    gap: 8px;
+}
+
+#city-search {
+    background-color: transparent;
+    width: 100%;
+    height: 40px;
+    padding-left: 12px;
+    border: 2px solid var(--text-color-white);
+    border-radius: 999px;
+    color: var(--text-color-white);
+    font-style: italic;
+}
+
+#city-search::placeholder {
+    color: var(--text-color-white)
+}
+
+#city-search:focus {
+    outline: none;
+}
+
+#search-button {
+    background-color: transparent;
+    border: 0;
+    font-size: 24px;
+    color: var(--text-color-white);
+}
+
+#where-text {
+    padding-top: 250px;
+}
