@@ -87,6 +87,11 @@ main {
     padding-top: 250px;
 }
 
+#search-error {
+    font-size: 14px;
+    font-style: italic;
+}
+
 #city-and-weather-info {
     padding-top: 80px;
     display: flex;
