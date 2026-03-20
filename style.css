@@ -22,7 +22,8 @@ header {
     align-items: center;
 }
 
-h1 {
+h1,
+h2 {
     margin: 0;
 }
 
@@ -38,6 +39,16 @@ h1 {
 
 main {
     padding: 20px;
+}
+
+#back-button {
+    position: fixed;
+    bottom: 50px;
+    left: 20px;
+}
+
+.hidden {
+    display: none;
 }
 
 #search-container {
@@ -74,4 +85,30 @@ main {
 
 #where-text {
     padding-top: 250px;
+}
+
+#city-and-weather-info {
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#temp-and-wind-container {
+    padding-top: 40px;
+    display: flex;
+    gap: 120px;
+    justify-content: center;
+}
+
+#temp-container,
+#wind-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#advice-text {
+    padding-top: 40px;
+    text-align: center;
 }
