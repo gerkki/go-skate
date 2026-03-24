@@ -95,7 +95,18 @@ function getSkateAdvice(data) {
 
 function updateSkateUI(result) {
     adviceText.textContent = result.text;
-    document.body.className = result.weather;
+
+    document.body.classList.remove("sunny", "rainy", "cloudy", "cold");
+
+    if (result.weather.includes("rain")) {
+        document.body.classList.add("rainy");
+    } else if (result.weather.includes("cloud")) {
+        document.body.classList.add("cloudy");
+    } else if (result.weather.includes("snow")) {
+        document.body.classList.add("cold");
+    } else {
+        document.body.classList.add("sunny");
+    }
     updateIcon(result.weather);
 }
 
@@ -130,4 +141,6 @@ function updateIcon(weather) {
 
 backButton.addEventListener("click", () => {
     showView("start-view");
+    document.body.classList.remove("sunny", "rainy", "cloudy", "cold");
+
 });

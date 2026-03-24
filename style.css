@@ -16,6 +16,22 @@ body {
     color: var(--text-color-white);
 }
 
+body.sunny {
+    background: var(--bg-gradient-sunny);
+}
+
+body.rainy {
+    background: var(--bg-gradient-rainy);
+}
+
+body.cloudy {
+    background: var(--bg-gradient-blue);
+}
+
+body.cold {
+    background: var(--bg-gradient-cold);
+}
+
 header {
     display: flex;
     justify-content: space-between;
