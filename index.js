@@ -45,6 +45,12 @@ function showView(viewId) {
     });
 
     document.getElementById(viewId).classList.remove("hidden");
+
+    if (viewId === "start-view") {
+        backButton.classList.add("hidden");
+    } else {
+        backButton.classList.remove("hidden");
+    }
 }
 
 function updateUI(data) {
@@ -97,15 +103,20 @@ function updateSkateUI(result) {
     adviceText.textContent = result.text;
 
     document.body.classList.remove("sunny", "rainy", "cloudy", "cold");
+    document.documentElement.classList.remove("sunny", "rainy", "cloudy", "cold");
 
     if (result.weather.includes("rain")) {
         document.body.classList.add("rainy");
+        document.documentElement.classList.add("rainy");
     } else if (result.weather.includes("cloud")) {
         document.body.classList.add("cloudy");
+        document.documentElement.classList.add("cloudy");
     } else if (result.weather.includes("snow")) {
         document.body.classList.add("cold");
+        document.documentElement.classList.add("cold");
     } else {
         document.body.classList.add("sunny");
+        document.documentElement.classList.add("sunny");
     }
     updateIcon(result.weather);
 }
@@ -142,5 +153,5 @@ function updateIcon(weather) {
 backButton.addEventListener("click", () => {
     showView("start-view");
     document.body.classList.remove("sunny", "rainy", "cloudy", "cold");
-
+    document.documentElement.classList.remove("sunny", "rainy", "cloudy", "cold");
 });
